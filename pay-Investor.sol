@@ -7,9 +7,9 @@ contract Constructor {
     uint fortune;
     bool deceased;
 
-    constructor() payable public { // constructor is a special function with runs when the coded is deployed
+    constructor() payable public { // constructor is a special function with runs only once when the code is deployed
         
-        Owner = msg.sender; //msg sender represent address that is being called
+        Owner = msg.sender; //msg sender make request and save the user public key once the deployed the code in EVM
         fortune = msg.value; // msg value tells how much ethers are send
         deceased = false;
     }
